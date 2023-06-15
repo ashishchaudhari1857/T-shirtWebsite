@@ -1,0 +1,19 @@
+table{
+    border: 1px solid black;
+     text-align: center;
+     margin: auto;
+     
+}
+ tr ,td ,th{
+    border: 1px solid black;
+    width:4vw;
+ }
+ .btn{
+     width: 10vw;
+     margin-left:  275px;
+    background-color: rebeccapurple;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
