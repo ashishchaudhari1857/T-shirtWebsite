@@ -1,7 +1,7 @@
  import SellerPage from "./SellerPage"
  import classes from './SellerHead.module.css'
  import Context from "../Store/context/context";
- import { useContext, useState } from "react";
+ import { useCallback, useContext, useState } from "react";
  import Cartbutton from "../Cart/CartButton";
  import Cart from "../Cart/Cart";
 const SellerHead =()=>{
@@ -15,9 +15,9 @@ const SellerHead =()=>{
     };
     
     const ctx=useContext(Context);
-      const add_to_list =(item)=>{
+      const add_to_list =useCallback((item)=>{
            ctx.add_to_list(item);
-      }
+      },[])
       console.log(ctx.Tshirts)
 
       

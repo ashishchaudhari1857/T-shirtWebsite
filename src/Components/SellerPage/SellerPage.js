@@ -1,6 +1,7 @@
 import Input from "../UI/Input";
 import Context from "../Store/context/context";
 import { useContext } from "react";
+import classes from './Sellerpage.module.css'
 const SellerPage = (props) => {
   const ctx=useContext(Context)
   const submithandler = (event) => {
@@ -30,7 +31,7 @@ const SellerPage = (props) => {
   console.log(ctx.totalAmount)
   };
   return (
-    <>
+    <div className={classes.card}>  
       <form onSubmit={submithandler}>
       <Input
           label={"ID"}
@@ -93,7 +94,7 @@ const SellerPage = (props) => {
         ></Input>
         <button type="submit">Add_item</button>
       </form>
-    </>
+   </div>
   );
 };
 

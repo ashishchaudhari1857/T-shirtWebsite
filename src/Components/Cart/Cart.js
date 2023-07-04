@@ -4,7 +4,8 @@
   import Modal from "../UI/Modal";
 const Cart =(props)=>{
  const ctx= useContext(Context)
-
+  const  totalAmount=ctx.totalAmount;
+  const quantity=ctx.quantity;
      const  cartitem = ctx.items.map((item ,i)=>{
         const totalitem =item.quantityL+item.quantityS+item.quantityM
         const  totalamount=totalitem*item.price;
@@ -34,8 +35,8 @@ return(
           <th>L</th>
           <th>M</th>
           <th>S</th>
-          <th>totalitem</th>
-          <th>totalprice</th>
+          <th>TotalItems</th>
+          <th>TotalAmount</th>
         </tr>
       </thead>
       <tbody>
@@ -46,6 +47,11 @@ return(
             <td colSpan="8">No items in cart</td>
           </tr>
         )}
+        <tr>
+            <td colSpan="6">Total</td>
+            <td colSpan="1">{quantity}</td>
+            <td colSpan="2">{totalAmount} rs</td>
+          </tr>
       </tbody>
     </table>
     <button  className={classes.btn}onClick={props.CloseHandler}>close</button>
